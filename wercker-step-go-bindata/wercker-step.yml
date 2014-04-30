@@ -1,0 +1,7 @@
+name: go-bindata
+version: 0.0.1
+description: wraps up all config resources into go source files (see go-bindata project on github.com)
+properties:
+  input-directory:
+    type: string
+    required: true
