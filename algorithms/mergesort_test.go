@@ -39,7 +39,6 @@ func TestChannelMergeSort(t *testing.T) {
 	}
 }
 
-
 func IsNotEqual(a, b []int) bool {
 	return !IsEqual(a, b)
 }

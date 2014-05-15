@@ -12,7 +12,7 @@ func ChannelMergeSort(set []int) []int {
 		go func() {
 			ch <- ChannelMergeSort(set[splitIndex:])
 		}()
-		
+
 		return Merge(<-ch, <-ch)
 	}
 	return set

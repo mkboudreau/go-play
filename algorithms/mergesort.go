@@ -34,21 +34,6 @@ func Merge(iSet, jSet []int) []int {
 	return kSet
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 type Comparable interface {
 	Compare(c1 Comparable) int
