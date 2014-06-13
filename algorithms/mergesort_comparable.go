@@ -1,5 +1,6 @@
 package algorithms
 
+/*
 type Comparable interface {
 	Compare(c1 Comparable) int
 }
@@ -48,3 +49,4 @@ func ComparableMerge(iSet, jSet []Comparable) []Comparable {
 
 	return kSet
 }
+*/
