@@ -29,7 +29,7 @@ func (runner StringTaskRunner) Run(data *TaskData) {
 }
 
 func adaptInterfaceChannelToStringChannel(in <-chan interface{}, out chan<- string, err chan<- error) {
-	defer close(out)
+	//defer close(out)
 
 	for hopefullyString := range in {
 		if reflect.TypeOf(hopefullyString).Kind() == reflect.String {
@@ -41,7 +41,7 @@ func adaptInterfaceChannelToStringChannel(in <-chan interface{}, out chan<- stri
 }
 
 func adaptStringChannelToInterfaceChannel(in <-chan string, out chan<- interface{}, err chan<- error) {
-	defer close(out)
+	//defer close(out)
 
 	for someString := range in {
 		out <- someString

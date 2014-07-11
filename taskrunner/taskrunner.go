@@ -33,10 +33,3 @@ func ChainTasks(data *TaskData, runners ...TaskRunner) {
 		}
 	}
 }
-
-func runChainedTask(data *TaskData, runner TaskRunner) {
-	go func() {
-		defer close(data.Out)
-		runner.Run(data)
-	}()
-}
