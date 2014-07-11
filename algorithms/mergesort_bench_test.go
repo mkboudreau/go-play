@@ -82,6 +82,16 @@ func BenchmarkMergeSortWithDynamicSizeOneThousand(b *testing.B) {
 		MergeSort(testcase)
 	}
 }
+func BenchmarkMergeSortWithDynamicSizeOneMillion(b *testing.B) {
+	testcase := make([]int, 1000000)
+	for i := range testcase {
+		testcase[i] = rand.Int()
+	}
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		MergeSort(testcase)
+	}
+}
 
 func BenchmarkChannelMergeSortWithNoSize(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -151,6 +161,16 @@ func BenchmarkChannelMergeSortWithDynamicSizeOneHundred(b *testing.B) {
 }
 func BenchmarkChannelMergeSortWithDynamicSizeOneThousand(b *testing.B) {
 	testcase := make([]int, 1000)
+	for i := range testcase {
+		testcase[i] = rand.Int()
+	}
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		ChannelMergeSort(testcase)
+	}
+}
+func BenchmarkChannelMergeSortWithDynamicSizeOneMillion(b *testing.B) {
+	testcase := make([]int, 1000000)
 	for i := range testcase {
 		testcase[i] = rand.Int()
 	}
