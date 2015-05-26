@@ -4,15 +4,16 @@ import (
 	"testing"
 )
 
-func TestMergeSort(t *testing.T) {
+func TestQuickSort(t *testing.T) {
 	for _, testCase := range testCases {
-		actual := MergeSort(testCase.test)
+		actual := QuickSort(testCase.test)
 		if IsNotEqual(actual, testCase.expected) {
 			t.Errorf("actual %v does not equal expected %v", actual, testCase.expected)
 		}
 	}
 }
 
+/*
 func TestChannelMergeSort(t *testing.T) {
 	for _, testCase := range testCases {
 		actual := ChannelMergeSort(testCase.test)
@@ -20,4 +21,4 @@ func TestChannelMergeSort(t *testing.T) {
 			t.Errorf("actual %v does not equal expected %v", actual, testCase.expected)
 		}
 	}
-}
+}*/
